@@ -19,7 +19,11 @@ The initial request suite failed against unimplemented routes. After implementat
 
 ## Hosted checks
 
-The workflow is included. Hosted run status and repository merge protection will be verified after publication; until then, they are not claimed as passing or enforced. The [Actions page](https://github.com/uspharaoh93/secure-document-portal/actions) is the live record.
+The [initial published revision passed all three hosted jobs](https://github.com/uspharaoh93/secure-document-portal/actions/runs/39678819868): **Verify portal**, **Secret scan**, and **Verified source artifact**. The Linux runner installed hash-locked dependencies, ran the application and browser checks, verified a restored copy, scanned the full fresh Git history and produced the tracked-source archive with its checksum.
+
+The `main` branch requires **Verify portal** and **Secret scan**, an up-to-date branch, a pull request and resolved review conversations. These rules apply to administrators. Force pushes and branch deletion are disabled. The required approving-review count is zero for this solo project; the pull-request requirement does not imply independent human approval. Workflow tokens default to read-only, and private vulnerability reporting is enabled.
+
+The linked run applies to its own commit. The [Actions page](https://github.com/uspharaoh93/secure-document-portal/actions) and README badge show later run results. This evidence update is submitted through the protected-branch workflow.
 
 ## Limits
 
