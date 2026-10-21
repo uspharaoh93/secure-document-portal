@@ -1,0 +1,5 @@
+-r requirements.in
+pip-audit
+ruff
+bandit
+playwright

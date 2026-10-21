@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<a href="{% url 'documents' %}">← Assigned documents</a><p class="eyebrow">Synthetic record · {{ document.pk }}</p><h1>{{ document.title }}</h1><div class="card"><pre class="document">{{ document.content }}</pre></div><p><a class="button" href="{% url 'download' document.pk %}">Download text file</a></p>{% endblock %}
